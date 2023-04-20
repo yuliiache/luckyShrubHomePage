@@ -32,19 +32,13 @@ ol, ul {
 
 body {
     background-color: #E2EFDE;
-    font-family: Helvetica, sans-serif;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 15%;
-    margin-right: 15%;
+    font-family: 'Poppins', sans-serif;
+    margin: 2rem 15% 2rem 15%;
 }
 
-h1 {
-    font-size: 3rem;
-}
-
-h2 {
-    font-size: 2rem;
+.content {
+    max-width: 1400px;
+    margin: auto;
 }
 
 header > img {
@@ -84,7 +78,7 @@ nav li a:hover {
     display: flex;
     flex-flow: row wrap;
     align-items: flex-end;
-    height:250px;
+    min-height: 250px;
     margin-top: 30px;
     margin-bottom: 10px;
     background-image: url("../images/promoback3.jpeg");
@@ -95,41 +89,62 @@ nav li a:hover {
 }
 
 .promotion h1 {
-    font-size: 40px;
-    margin: 40px 20px 15px 10px;
+    font-size: 3rem;
+    margin: 40px 30px 15px 30px;
 }
 
 .promotion p {
-    margin: 20px 40px 40px 10px;
+    margin: 20px 40px 40px 30px;
+    width: 1080px;
 }
 
 .info {
     display: flex;
-    align-items: center;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: space-around;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .info article {
     flex: 1;
+    min-width: 250px;
     border-radius: 25px;
     border: 2px solid #AFD0BF;
     padding: 30px;
-    margin: 10px;
+    margin: 10px 10px 10px 10px;
 }
 
 .info img {
-    align-self: center;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
 }
 
 .info h2 {
-    margin: 15px 0px 15px 0px;
+    font-size: 2rem;
+    margin: 25px 0 20px 0;
+    height: 70px;
+}
+
+.info p {
+    margin-top: 30px;
+}
+
+
+#first {
+    margin-left: 0;
+}
+#last {
+    margin-right: 0;
 }
 
 footer {
     background-color: #333533;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     padding: 15px;
 }
 
@@ -139,5 +154,10 @@ footer div {
 
 .copyright {
     color: #E2EFDE;
-    align-self: flex-end;
+    flex:50%;
+    text-align: end;
+    text-decoration: overline;
+}
+.footerLogo {
+    align-self: start;
 }
