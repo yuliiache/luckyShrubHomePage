@@ -61,7 +61,7 @@ nav ul {
 nav li {
     display: inline-block;
     font-size: 18px;
-    color: #FFF8DCFF;
+    position: relative;
 }
 
 nav li a {
@@ -70,10 +70,27 @@ nav li a {
     transition: all 0.3s ease 0s;
 }
 
-nav li a:hover {
-    color: #AFD0BF
+nav li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #AFD0BF;
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-out;
 }
 
+nav li a:hover {
+    color: #AFD0BF;
+}
+
+nav li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
 .promotion {
     display: flex;
     flex-flow: row wrap;
@@ -83,13 +100,14 @@ nav li a:hover {
     margin-bottom: 10px;
     background-image: url("../images/promoback3.jpeg");
     background-size: cover;
-    background-position: left center;
+    background-position: right bottom;
     color: #FFF8DCFF;
     border-radius: 25px;
 }
 
 .promotion h1 {
     font-size: 3rem;
+    font-weight: bold;
     margin: 40px 30px 15px 30px;
 }
 
@@ -113,7 +131,14 @@ nav li a:hover {
     border-radius: 25px;
     border: 2px solid #AFD0BF;
     padding: 30px;
-    margin: 10px 10px 10px 10px;
+    margin: 20px 10px 20px 10px;
+}
+
+.info h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 25px 0 20px 0;
+    height: 70px;
 }
 
 .info img {
@@ -123,14 +148,10 @@ nav li a:hover {
     margin: auto;
 }
 
-.info h2 {
-    font-size: 2rem;
-    margin: 25px 0 20px 0;
-    height: 70px;
-}
 
 .info p {
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 
@@ -150,10 +171,12 @@ footer {
 
 footer div {
     flex: 1;
+    margin: 0 30px 0 30px;
 }
 
 .copyright {
     color: #E2EFDE;
+    font-size: 14px;
     flex:50%;
     text-align: end;
     text-decoration: overline;
